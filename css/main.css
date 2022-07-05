@@ -1,0 +1,223 @@
+:root {
+  --white-color: #ffffff;
+  --body-color: #fafafa;
+  --text-color: #111517;
+  --country-bg-color: var(--white-color);
+  --placeholder-color: #848484;
+  --search-icon: url("../images/search.svg");
+  --icon-back: url("../images/icon-back.svg");
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-Regular.woff2") format("woff2"),
+    url("../fonts/NunitoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-ExtraBold.woff2") format("woff2"),
+    url("../fonts/NunitoSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/NunitoSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* GLOBAL */
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*:focus {
+  outline: 2px dashed blue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  font-family: "Nunito Sans";
+  background-color: var(--body-color);
+  color: #222;
+}
+
+img {
+  max-height: 100%;
+  height: auto;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* HEADER */
+.site-header {
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  z-index: 2;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: var(--text-color);
+}
+.header-dark-mode {
+  border: none;
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+.header-dark-mode__inner::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-image: url("../images/moon.svg");
+  margin-right: 10px;
+}
+.header-dark-mode__inner {
+  display: flex;
+  align-items: center;
+}
+.header-dark-mode__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+/* COUNTRY */
+.country-container {
+  padding-top: 48px;
+}
+.country-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  min-width: 480px;
+}
+.form-input {
+  display: block;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 74px;
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+  border: none;
+  border-radius: 5px;
+  background-image: var(--search-icon);
+  background-repeat: no-repeat;
+  background-position: 32px center;
+}
+.form-input::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--placeholder-color);
+}
+.select-form {
+  display: block;
+  width: 200px;
+  padding: 18px 18px 18px 24px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+  border: none;
+  border-radius: 5px;
+  background-color: var(--white-color);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-color);
+}
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: -75px;
+  margin-left: -75px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.country-item {
+  background-color: var(--white-color);
+  width: 264px;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 75px;
+  margin-left: 74px;
+}
+.country-item__link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+.country-item__image {
+  display: block;
+  width: 264px;
+  height: 160px;
+  object-fit: cover;
+}
+.country-item__info {
+  padding: 24px 0px 45px 24px;
+}
+.country-item__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+.country-item__about {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-color);
+}
+.country-item__about:last-child {
+  margin-bottom: 0;
+}
+.country-item__about:not(:last-child) {
+  margin-bottom: 8px;
+}
