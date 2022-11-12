@@ -221,3 +221,129 @@ img {
 .country-item__about:not(:last-child) {
   margin-bottom: 8px;
 }
+.country-item__btn {
+  margin-top: 8px;
+  padding: 4px 10px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+/* Modal */
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+.modal {
+  padding: 25px;
+  background: #ffffff;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+  border-radius: 6px;
+}
+
+.modal__close-btn {
+  padding: 10px 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111517;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
+  border-radius: 6px;
+}
+
+.modal__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.modal__img {
+  width: 460px;
+  height: 300px;
+  margin-right: 100px;
+}
+
+.modal__info {
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 44px;
+  color: #111517;
+}
+
+.modal__info-text-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.modal__info-text-left {
+  margin-right: 120px;
+}
+
+.modal__info-text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111517;
+}
+
+.modal__info-text:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.modal__borders-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.modal-text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111517;
+}
+
+.modal__borders-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin-left: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.modal__borders-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.modal__borders-button {
+  padding: 5px 28px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  color: #111517;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.104931);
+  border-radius: 2px;
+}
